@@ -4,7 +4,6 @@ function abrirConta() {
 
 
     saldo = saldo.replace(/[^0-9,]/g, '');
-
     if (saldo === "") {
         alert('Numero invalido ou ausente');
         return;
@@ -19,5 +18,13 @@ function abrirConta() {
         return;
     }
 
+    localStorage.setItem("saldo", saldo);
+
     window.location.href = "depositoSaque.html";
+}
+
+function carregarSaldo(){
+    let saldo = localStorage.getItem("saldo");
+
+    document.getElementById("saldo").innerText = saldo;
 }
