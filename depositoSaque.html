@@ -7,26 +7,28 @@
     <title>Banco DEV</title>
 </head>
 
-<body>
+<body onload="carregarSaldo(); mostrarExtrato()">
+    <script src="script.js"></script>
 
     <main>
 
-        <p>Saldo em conta</p>
+        <p>Saldo em conta:</p>
+        <h2></h2>
         <h1 id="saldo"></h1>
+
+        <h3>Extrato</h3>
+        <ul id="extrato"></ul>
 
         <form action="#">
 
             <input type="number" id="valorAuteracao" placeholder="R$:0,00">
 
-            <input type="button" value="Deposito" onclick="Deposito()">
+            <input type="button" value="Deposito" onclick="deposito()">
 
-            <input type="button" value="Saque" onclick="Saque()">
+            <input type="button" value="Saque" onclick="saque()">
 
         </form>
     </main>
-
-    <script src="script.js"></script>
-
 </body>
 
 </html>
